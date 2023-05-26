@@ -6,7 +6,7 @@ let imagesLoaded = 0;
 let totalImages = 0;
 let photosArray = [];
 
-const count = 30;
+let count = 30;
 const apiKey = 'VFxHE6O067ov-KUPYAFTpQcrvDLRMko_vdDb5pzS-F0';
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
@@ -28,7 +28,6 @@ function setAttributes(element, attributes) {
 function displayPhotos() {
     imagesLoaded = 0;
     totalImages = photosArray.length;
-    console.log('total images', totalImages);
     photosArray.forEach((photo) => {
         const item = document.createElement('a');
         setAttributes(item, {
